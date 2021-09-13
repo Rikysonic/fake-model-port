@@ -28,3 +28,15 @@ assets:
     method: copy
     source:
       - name: went.bin
+#Texts & Libretto
+- name: msg/us/sys.bar
+  method: binarc
+  multi:
+  - name: msg/uk/sys.bar
+  source:
+  - name: sys
+    type: list
+    method: kh2msg
+    source:
+    - name: msg/sys.yml
+      language: en

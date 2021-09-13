@@ -1,0 +1,30 @@
+title: FAKE Model Port
+originalAuthor: o0DemonBoy0o
+game: kh2
+description: A port of FAKE model, taken from o0DemonBoy0o's GoA-ROM-Edition
+assets:
+#FAKE (Kingdom Key D)
+- name: obj/W_EX010_WI.mdlx
+  method: copy
+  source:
+  - name: obj/W_EX010_WI.mdlx
+#Pictures
+- name: itempic/item-299.imd #FAKE
+  method: copy
+  source:
+  - name: itempic/FAKE_new.imd
+#Implement New Pictures and Stats
+- name: 03system.bin
+  method: binarc
+  source:
+  - name: item
+    type: list
+    method: listpatch
+    source:
+      - name: ItemList.yml
+        type: item
+  - name: went
+    type: list
+    method: copy
+    source:
+      - name: went.bin
